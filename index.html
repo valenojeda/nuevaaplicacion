@@ -24,7 +24,7 @@
     }
 
     .form-container {
-      background-color: #da2b2b; /* rojo fuerte */
+      background-color: #da2b2b;
       padding: 30px;
       border-radius: 15px;
       width: 100%;
@@ -98,12 +98,13 @@
         return;
       }
 
+      const mesesAlquiler = 11;
       let valorAlquilerUSD = valorAlquilerUYU / valorDolar;
-      let valorAlquilerAnual = valorAlquilerUSD * 12;
+      let valorAlquilerAnual = valorAlquilerUSD * mesesAlquiler;
       let rentabilidadAnual = (valorAlquilerAnual / valorPropiedad) * 100;
 
       document.getElementById("resultado").innerText =
-        "Rentabilidad Anual: " + rentabilidadAnual.toFixed(2) + "%";
+        "Rentabilidad Anual (11 meses): " + rentabilidadAnual.toFixed(2) + "%";
     }
 
     // Registro del Service Worker
